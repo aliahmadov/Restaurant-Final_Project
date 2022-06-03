@@ -1,0 +1,48 @@
+1
+Order number: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
+Table No: 4
+Order Price: 19.6
+Order Date: Jun  1 2022
+==============================================
+1
+Order number: 1
+Meal Id: 5
+Meal Name: National Yarpaq Dolma
+Table No: 5
+Order Price: 44.8
+Order Date: Jun  1 2022
+==============================================
+1
+Order number: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
+Table No: 4
+Order Price: 19.6
+Order Date: Jun  1 2022
+==============================================
+1
+Order number: 1
+Meal Id: 10
+Meal Name: Lula Kabab
+Table No: 4
+Order Price: 307.5 $
+Order Date: Jun  1 2022
+==============================================
+1
+Order number: 1
+Meal Id: 10
+Meal Name: Lula Kabab
+Table No: 4
+Order Price: 205 $
+Order Date: Jun  1 2022
+==============================================
+1
+Order number: 1
+Meal Id: 10
+Meal Name: Lula Kabab
+Table No: 4
+Order Price: 410 $
+Order Date: Jun  1 2022
+==============================================

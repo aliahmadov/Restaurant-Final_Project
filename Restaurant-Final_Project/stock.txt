@@ -1,0 +1,61 @@
+12
+ID: 1
+Ingredient Name: Italian Mushroom
+Count: 125
+Price: 0.7 $
+===================================================
+ID: 2
+Ingredient Name: Khazakh Tomato
+Count: 220
+Price: 0.9 $
+===================================================
+ID: 3
+Ingredient Name: Holland Cheese
+Count: 150
+Price: 1.3 $
+===================================================
+ID: 4
+Ingredient Name: Salt
+Count: 140
+Price: 0.3 $
+===================================================
+ID: 5
+Ingredient Name: Beef
+Count: 360
+Price: 8.6 $
+===================================================
+ID: 6
+Ingredient Name: Chili Pepper
+Count: 72
+Price: 0.45 $
+===================================================
+ID: 7
+Ingredient Name: Tamasha
+Count: 95
+Price: 1.4 $
+===================================================
+ID: 11
+Ingredient Name: Eggplant
+Count: 250
+Price: 1.2 $
+===================================================
+ID: 9
+Ingredient Name: Potato
+Count: 200
+Price: 0.95 $
+===================================================
+ID: 12
+Ingredient Name: Green Sweet Pepper
+Count: 250
+Price: 0.5 $
+===================================================
+ID: 10
+Ingredient Name: Cabbage
+Count: 150
+Price: 1.2 $
+===================================================
+ID: 8
+Ingredient Name: Halal Salami
+Count: 150
+Price: 5.5 $
+===================================================
