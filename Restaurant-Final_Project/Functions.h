@@ -307,6 +307,27 @@ void ShowColdDrinkOrders() {
 	}
 }
 
+bool CheckOrderNumberForCold(int no) {
+
+	for (size_t i = 0; i <restaurant_kichen.cold_orders.size(); i++)
+	{
+		if (restaurant_kichen.cold_orders[i].order_number == no) {
+			return true;
+		}
+	}
+	return false;
+}
+
+bool CheckOrderNumberForHot(int no) {
+
+	for (size_t i = 0; i < restaurant_kichen.hot_orders.size(); i++)
+	{
+		if (restaurant_kichen.hot_orders[i].order_number == no) {
+			return true;
+		}
+	}
+	return false;
+}
 
 void ShowHotDrinkOrders() {
 	for (size_t i = 0; i < restaurant_kichen.hot_orders.size(); i++)
@@ -692,6 +713,9 @@ void AdminSubMenu() {
 	cout << "Add Drink                           8" << endl;
 	cout << "Delete Drink                        9" << endl;
 	cout << "Add New Product to the Stock       10" << endl;
+	cout << "Show Recipes of Dishes             11" << endl;
+	cout << "Show Menu                          12" << endl;
+
 	cout << "Enter Anything To Go Back           " << endl;
 }
 

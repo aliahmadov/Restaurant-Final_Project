@@ -77,12 +77,12 @@ void WriteOrderToFile() {
 
 		for (size_t i = 0; i < restaurant_kichen.order_count; i++)
 		{
-			fout <<"Order number: "<< restaurant_kichen.orders[i]->order_number << endl;
+			fout << "Order number: " << restaurant_kichen.orders[i]->order_number << endl;
 			fout << "Order Count: " << restaurant_kichen.orders[i]->count << endl;
-			fout <<"Meal Id: "<<restaurant_kichen.orders[i]->meal->GetId() << endl;
-			fout <<"Meal Name: "<< restaurant_kichen.orders[i]->meal->GetName() << endl;
-			fout <<"Table No: "<< restaurant_kichen.orders[i]->table_no << endl;
-			fout <<"Order Price: "<< restaurant_kichen.orders[i]->price <<" $"<< endl;
+			fout << "Meal Id: " << restaurant_kichen.orders[i]->meal->GetId() << endl;
+			fout << "Meal Name: " << restaurant_kichen.orders[i]->meal->GetName() << endl;
+			fout << "Table No: " << restaurant_kichen.orders[i]->table_no << endl;
+			fout << "Order Price: " << restaurant_kichen.orders[i]->price << " $" << endl;
 			fout << "Order Date: " << restaurant_kichen.orders[i]->date << endl;
 			fout << "==============================================" << endl;
 		}
@@ -100,14 +100,58 @@ void WriteStockToFile() {
 
 		for (size_t i = 0; i < ing_count; i++)
 		{
-			fout <<"ID: "<< ingredients[i]->GetId() << endl;
-			fout <<"Ingredient Name: "<< ingredients[i]->GetName() << endl;
-			fout << "Count: "<<ingredients[i]->GetCount() << endl;
-			fout << "Price: " << ingredients[i]->GetPrice() <<" $"<< endl;
+			fout << "ID: " << ingredients[i]->GetId() << endl;
+			fout << "Ingredient Name: " << ingredients[i]->GetName() << endl;
+			fout << "Count: " << ingredients[i]->GetCount() << endl;
+			fout << "Price: " << ingredients[i]->GetPrice() << " $" << endl;
 			fout << "===================================================" << endl;
 		}
 	}
 	fout.close();
 }
+
+
+void WriteColdDrinkOrdersToFile(const ColdDrinkOrder& cd) {
+	ofstream fout("Colddrinkorders.txt", ios::app);
+
+	if (fout.is_open()) {
+
+
+		fout << "Table No: " << cd.table_no << endl;
+		fout << "Price: " << cd.price <<" $"<< endl;
+		fout << "Order number: " << cd.order_number << endl;
+
+		for (size_t k = 0; k < cd.ColdDrinks.size(); k++)
+		{
+			fout << cd.ColdDrinks[k].GetName() << " -  " << cd.count[k] << endl;
+
+		}
+		fout << "==============================" << endl;
+
+		fout.close();
+	}
+}
+
+void WriteHotDrinkOrdersToFile(const HotDrinkOrder& hd) {
+	ofstream fout("Hotdrinkorders.txt", ios::app);
+
+	if (fout.is_open()) {
+
+
+		fout << "Table No: " << hd.table_no << endl;
+		fout << "Price: " << hd.price << " $" << endl;
+		fout << "Order number: " << hd.order_number << endl;
+
+		for (size_t k = 0; k < hd.HotDrinks.size(); k++)
+		{
+			fout << hd.HotDrinks[k].GetName() << " -  " << hd.count[k] << endl;
+
+		}
+		fout << "==============================" << endl;
+
+		fout.close();
+	}
+}
+
 
 

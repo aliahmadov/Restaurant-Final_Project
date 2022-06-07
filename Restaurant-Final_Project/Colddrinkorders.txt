@@ -1,0 +1,18 @@
+Table No: 8
+Price: 7 $
+Order number: 1
+Ayran -  2
+Apple Juice -  2
+==============================
+Table No: 8
+Price: 4 $
+Order number: 1
+Cola -  2
+Ayran -  1
+==============================
+Table No: 8
+Price: 6 $
+Order number: 1
+Ayran -  1
+Apple Juice -  2
+==============================

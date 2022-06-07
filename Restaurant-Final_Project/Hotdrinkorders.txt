@@ -1,0 +1,28 @@
+Table No: 8
+Price: 7.8 $
+Order number: 1
+Tea -  2
+Coffee -  2
+==============================
+Table No: 8
+Price: 3 $
+Order number: 1
+Tea -  2
+==============================
+Table No: 8
+Price: 3 $
+Order number: 1
+Tea -  2
+==============================
+Table No: 8
+Price: 5.4 $
+Order number: 1
+Tea -  2
+Coffee -  1
+==============================
+Table No: 8
+Price: 9 $
+Order number: 1
+Tea -  2
+Hot Chocolate -  2
+==============================

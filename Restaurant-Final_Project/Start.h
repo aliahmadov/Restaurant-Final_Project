@@ -250,18 +250,41 @@ void Start() {
 
 									int new_count = ingredient->GetCount() + count;
 									ingredient->SetCount(new_count);
+									if (restaurant.GetBudget() >= ingredient->GetPrice() * count) {
 
-									restaurant.SetBudget(restaurant.GetBudget() - (ingredient->GetPrice() * count));
-									cout << endl;
-									cout << count << " " << ingredient->GetName() << " Added Successfully !" << endl;
-									cout << "=========================" << endl;
+										restaurant.SetBudget(restaurant.GetBudget() - (ingredient->GetPrice() * count));
+										cout << endl;
+										cout << count << " " << ingredient->GetName() << " Added Successfully !" << endl;
+										cout << "=========================" << endl;
 
-									system("pause");
-									WriteStockToFile();
+										system("pause");
+										WriteStockToFile();
+									}
+									else {
+										mysetcolor(4, 0);
+										cout << "\nA lack of Budget" << endl;
+										mysetcolor(7, 0);
+										system("pause");
+									}
 								}
 								else if (option == 7) {
 
-									cout << "Restaurant Budget: " << restaurant.GetBudget() << " $" << endl;
+
+									if (restaurant.GetBudget() > 0) {
+
+										cout << "\nRestaurant Budget: ";
+										mysetcolor(2, 0);
+										cout << restaurant.GetBudget() << " $" << endl;
+										mysetcolor(7, 0);
+										system("pause");
+									}
+									else {
+										cout << "\nRestaurant Budget: ";
+										mysetcolor(4, 0);
+										cout << restaurant.GetBudget() << " $" << endl;
+										mysetcolor(7, 0);
+										system("pause");
+									}
 								}
 
 								else if (option == 8) {
@@ -288,8 +311,8 @@ void Start() {
 										cout << "Enter its count in the stock: ";
 										cin >> count;
 
-										HotDrink hotdrink(name, price, count);
 
+										HotDrink hotdrink(name, price, count);
 										AddHotDrink(hotdrink);
 										cout << "\n" << name << " has been successfully added to the Menu" << endl;
 										system("pause");
@@ -405,9 +428,26 @@ void Start() {
 										mysetcolor(4, 0);
 										cout << "\nLack of Budget !!!" << endl;
 										mysetcolor(7, 0);
+										system("pause");
 									}
 								}
 
+								else if (option == 11) {
+									for (size_t i = 0; i < dish_count; i++)
+									{
+										dishes[i]->PrintRecipe();
+									}
+									system("pause");
+								}
+								else if (option == 12) {
+
+									cout << "=======================================================================================" << endl;
+									ShowDishes();
+									ShowHotDrinks();
+									ShowColdDrinks();
+									cout << "\n=====================================================================================" << endl;
+									system("pause");
+								}
 								else if (option == 0) {
 									break;
 								}
@@ -449,15 +489,16 @@ void Start() {
 
 										for (size_t i = 0; i < order->count; i++)
 										{
-											for (size_t k = 0; k < order->meal->GetCount(); k++)
+											for (size_t k = 0; k < order->items_count; k++)
 											{
-												auto ingredient = GetIngredientById(order->meal->GetItems()[k]->ingredient->GetId());
+												auto ingredient = GetIngredientById(order->items[k]->ingredient->GetId());
 												ingredient->SetCount(order->items[k]->ingredient->GetCount() - order->items[k]->amount);
 											}
 										}
 										WriteStockToFile();
 										DeleteOrderByOrderNumber(order_number);
 										cout << "Order Accepted !!!" << endl;
+										system("pause");
 									}
 									else if (number == 2) {
 										system("cls");
@@ -480,6 +521,10 @@ void Start() {
 										auto table = GetTableByTableNo(table_no);
 
 										table->SetMessage(messageFromKitchen);
+										mysetcolor(4, 0);
+										cout << "Order with order number " << order->order_number << " has been successfully rejected " << endl;
+										mysetcolor(7, 0);
+										system("pause");
 									}
 
 									else if (number == 3) {
@@ -496,6 +541,7 @@ void Start() {
 											cout << order->items[i]->ingredient->GetName() << " - " << order->items[i]->amount << endl;
 											cout << "===================================" << endl;
 										}
+										system("pause");
 									}
 
 
@@ -525,11 +571,11 @@ void Start() {
 										int no = 0;
 										cout << "Enter order number: ";
 										cin >> no;
-										if (no <= restaurant_kichen.cold_orders.size()) {
+										if (CheckOrderNumberForCold(no)) {
 
 											auto cd_order = GetCdOrderByNumber(no);
 											restaurant.SetBudget(restaurant.GetBudget() + cd_order.price);
-											cout <<"Order number "<< cd_order.order_number << " for table no " << cd_order.table_no << " has been successfully accepted" << endl;
+											cout << "Order number " << cd_order.order_number << " for table no " << cd_order.table_no << " has been successfully accepted" << endl;
 											DeleteCdOrderByOrderNumber(no);
 											system("pause");
 										}
@@ -555,11 +601,11 @@ void Start() {
 										cout << "Enter order number: ";
 										cin >> no;
 
-										if (no <= restaurant_kichen.hot_orders.size()) {
+										if (CheckOrderNumberForHot(no)) {
 
 											auto hd_order = GetHdOrderByNumber(no);
 											restaurant.SetBudget(restaurant.GetBudget() + hd_order.price);
-											cout <<"Order number "<< hd_order.order_number << " for table no " << hd_order.table_no << " has been successfully accepted" << endl;
+											cout << "Order number " << hd_order.order_number << " for table no " << hd_order.table_no << " has been successfully accepted" << endl;
 											DeleteHdOrderByOrderNumber(no);
 											system("pause");
 										}
@@ -715,6 +761,7 @@ void Start() {
 							order_number++;
 							Order* order = new Order{ dish,amount,date,table_select,order_number,price ,items };
 							order->items_count = order->meal->GetCount();
+							order->items = order->meal->GetItems();
 							AddOrdersToKitchen(order);
 							WriteOrderToFile();
 						}
@@ -746,9 +793,11 @@ void Start() {
 								post_price += ingredient->GetPrice() * amount;
 
 								order->AddIngredientToDish(item, order);
+								
 							}
 							price += post_price;
 							order->price = price;
+							
 							cout << "\nPayment: " << price << " $" << endl;
 							cout << "Date: " << date << endl;
 
@@ -837,10 +886,12 @@ void Start() {
 							}
 							hd.price = sum_price;
 							AddHotDrinkOrderToKitchen(hd);
+							WriteHotDrinkOrdersToFile(hd);
+							MakeTableFull(table_select);
 						}
 						else if (select == 2) {
 							ShowColdDrinks();
-
+							//int count_order = 0;
 							while (true) {
 								system("cls");
 								ShowColdDrinks();
@@ -855,7 +906,7 @@ void Start() {
 								cout << "Enter the count: ";
 								cin >> count;
 
-
+								//	count_order++;
 								auto cold_drink = GetColdDrinkById(id);
 								coldDrinks.push_back(cold_drink);
 								counter[index] = count;
@@ -889,6 +940,8 @@ void Start() {
 							}
 							cd.price = sum_price;
 							AddColdDrinkOrderToKitchen(cd);
+							WriteColdDrinkOrdersToFile(cd);
+							MakeTableFull(table_select);
 						}
 
 						else if (select == 0) {

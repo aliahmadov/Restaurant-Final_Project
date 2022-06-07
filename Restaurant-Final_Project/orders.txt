@@ -1,48 +1,220 @@
 1
 Order number: 1
-Meal Id: 8
-Meal Name: Turkish Kabab
+Order Count: 2
+Meal Id: 10
+Meal Name: Lula Kabab
 Table No: 4
-Order Price: 19.6
-Order Date: Jun  1 2022
+Order Price: 41 $
+Order Date: Jun  5 2022
 ==============================================
 1
 Order number: 1
+Order Count: 2
+Meal Id: 2
+Meal Name: Chicago Pizza
+Table No: 5
+Order Price: 27.5 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 2
 Meal Id: 5
 Meal Name: National Yarpaq Dolma
-Table No: 5
-Order Price: 44.8
-Order Date: Jun  1 2022
+Table No: 4
+Order Price: 44.8 $
+Order Date: Jun  5 2022
 ==============================================
 1
 Order number: 1
+Order Count: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
+Table No: 10
+Order Price: 9.8 $
+Order Date: Jun  5 2022
+==============================================
+2
+Order number: 1
+Order Count: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
+Table No: 10
+Order Price: 9.8 $
+Order Date: Jun  5 2022
+==============================================
+Order number: 2
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 9
+Order Price: 12.4 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 2
 Meal Id: 8
 Meal Name: Turkish Kabab
 Table No: 4
-Order Price: 19.6
-Order Date: Jun  1 2022
+Order Price: 31.6 $
+Order Date: Jun  5 2022
 ==============================================
 1
 Order number: 1
-Meal Id: 10
-Meal Name: Lula Kabab
+Order Count: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
 Table No: 4
-Order Price: 307.5 $
-Order Date: Jun  1 2022
+Order Price: 9.8 $
+Order Date: Jun  5 2022
+==============================================
+2
+Order number: 1
+Order Count: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
+Table No: 4
+Order Price: 9.8 $
+Order Date: Jun  5 2022
+==============================================
+Order number: 2
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 4
+Order Price: 9.5 $
+Order Date: Jun  5 2022
 ==============================================
 1
 Order number: 1
-Meal Id: 10
-Meal Name: Lula Kabab
+Order Count: 2
+Meal Id: 8
+Meal Name: Turkish Kabab
 Table No: 4
-Order Price: 205 $
-Order Date: Jun  1 2022
+Order Price: 30.6 $
+Order Date: Jun  5 2022
 ==============================================
 1
 Order number: 1
+Order Count: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
+Table No: 4
+Order Price: 12.2 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 2
 Meal Id: 10
 Meal Name: Lula Kabab
 Table No: 4
-Order Price: 410 $
-Order Date: Jun  1 2022
+Order Price: 52 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 2
+Order Count: 1
+Meal Id: 8
+Meal Name: Turkish Kabab
+Table No: 9
+Order Price: 9.8 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 1
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 4
+Order Price: 4.75 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 10
+Order Price: 9.5 $
+Order Date: Jun  5 2022
+==============================================
+2
+Order number: 1
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 10
+Order Price: 9.5 $
+Order Date: Jun  5 2022
+==============================================
+Order number: 2
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 9
+Order Price: 20.5 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 10
+Order Price: 9.5 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 10
+Order Price: 9.5 $
+Order Date: Jun  5 2022
+==============================================
+2
+Order number: 1
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 10
+Order Price: 9.5 $
+Order Date: Jun  5 2022
+==============================================
+Order number: 2
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 9
+Order Price: 21.5 $
+Order Date: Jun  5 2022
+==============================================
+1
+Order number: 1
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 10
+Order Price: 9.5 $
+Order Date: Jun  5 2022
+==============================================
+2
+Order number: 1
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 10
+Order Price: 9.5 $
+Order Date: Jun  5 2022
+==============================================
+Order number: 2
+Order Count: 2
+Meal Id: 9
+Meal Name: Potato Mushroom Kabab
+Table No: 9
+Order Price: 21.5 $
+Order Date: Jun  5 2022
 ==============================================
